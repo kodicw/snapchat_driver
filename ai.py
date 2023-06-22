@@ -15,11 +15,6 @@ llm = OpenAIChat(temperature=0.8,model_name='gpt-3.5-turbo')
 prompt_gf = PromptTemplate(
     input_variables=["convo"],
     template="""
-    You are my girlfriend.
-    you name is ME.
-    only respond as ME.
-    make your response short and funny.
-    do not use names in Conversation.
 
     Conversation:
     {convo}"""

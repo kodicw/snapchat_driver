@@ -12,14 +12,14 @@ load_dotenv()
 # Put OPENAI_API_KEY in .env file
 
 llm = OpenAIChat(temperature=0.8,model_name='gpt-3.5-turbo')
-prompt_gf = PromptTemplate(
+prompt = PromptTemplate(
     input_variables=["convo"],
     template="""
 
     Conversation:
     {convo}"""
     )
-ai_gf = LLMChain(llm=llm, prompt=prompt_gf, verbose=True)
+ai = LLMChain(llm=llm, prompt=prompt, verbose=True)
 
 
 def Chat_AI(convo):
